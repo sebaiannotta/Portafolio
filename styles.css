@@ -1,0 +1,277 @@
+/* General */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+/* Sección Hero */
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: white; /* Texto blanco */
+    padding: 50px 20px;
+    text-align: center;
+    height: 100vh; /* Altura completa de la pantalla */
+    background-color: #1a1a1a; /* Fondo oscuro */
+}
+
+/* Contenedor de partículas */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Detrás del contenido */
+}
+
+/* Contenido principal */
+.hero .content {
+    position: relative;
+    z-index: 1; /* Por encima de las partículas */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Proyectos */
+.projects {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-card {
+    background: #f0f0f0;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Sobre mí */
+.about {
+    padding: 40px 20px;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Contacto */
+.contact {
+    padding: 40px 20px;
+    background: linear-gradient(120deg, #65c7f7, #3a0ca3);
+    color: white;
+    text-align: center;
+}
+
+.contact a {
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Tipografía */
+h1, h2, h3 {
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Transiciones suaves */
+* {
+    transition: all 0.3s ease-in-out;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: slideIn 2s ease-in-out;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+/* Contenedor del menú */
+.menu-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3a0ca3;
+    color: white;
+    z-index: 1000;
+}
+
+/* Icono de menú hamburguesa */
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.line {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Animación del menú abierto */
+.menu-button.open .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-button.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button.open .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+.menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ff7eb3;
+    color: white;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 9px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilo de los enlaces del menú */
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    text-align: right;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #f3a0f2; /* Cambia el color al pasar el mouse */
+}
+/* Estilo base para las cajas */
+.boxes-container {
+    display: flex; /* Usar Flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    gap: 20px; /* Espacio entre las cajas */
+}
+
+.box {
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    padding: 20px;
+    width: 200px; /* Ancho fijo para mantener el tamaño uniforme */
+    height: 120px; /* Alto fijo */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos verticalmente */
+    justify-content: center; /* Centra el contenido dentro de la caja */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Alinear el texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.1); /* Agranda la caja al pasar el cursor */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.link {
+    color: #007bff; /* Azul para los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 14px;
+}
+
+.link:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+.fade-in-left {
+    opacity: 0; /* Oculto inicialmente */
+    transform: translateX(-100px); /* Desplazado hacia la izquierda */
+    animation: fadeInLeft 1s ease-out forwards; /* Animación */
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
