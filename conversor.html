@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Monedas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center h-screen">
+    <div class="bg-gray-800 rounded-lg shadow-lg p-6 max-w-md w-full">
+        <h1 class="text-2xl font-bold text-blue-500 text-center mb-6">Conversor de Monedas</h1>
+        <form id="conversor-form" class="space-y-4">
+            <div>
+                <label for="cantidad" class="block text-sm font-medium">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" required 
+                    class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg p-2">
+            </div>
+            <div>
+                <label for="origen" class="block text-sm font-medium">Moneda Origen:</label>
+                <select id="origen" name="origen" required 
+                    class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg p-2"></select>
+            </div>
+            <div>
+                <label for="destino" class="block text-sm font-medium">Moneda Destino:</label>
+                <select id="destino" name="destino" required 
+                    class="w-full bg-gray-700 text-white border border-gray-600 rounded-lg p-2"></select>
+            </div>
+            <button type="submit" 
+                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded-lg">Convertir</button>
+        </form>
+
+        <div id="resultado-container" class="bg-gray-700 text-white rounded-lg p-4 mt-4 hidden">
+            <p id="resultado" class="text-center text-lg font-medium"></p>
+        </div>
+    </div>
+
+    <script src="conversor.js" defer></script>
+</body>
+</html>
